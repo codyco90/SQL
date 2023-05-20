@@ -1,0 +1,21 @@
+CREATE TABLE inventory (id INTEGER PRIMARY KEY, name TEXT, price NUMERIC, color TEXT, terrain TEXT);
+
+INSERT INTO inventory VALUES (1, "mountain explorer", 673.38, "green", "mountain");
+INSERT INTO inventory VALUES (2, "roadster", 449.99, "blue", "street");
+INSERT INTO inventory VALUES (3, "the zipper", 948.49, "black", "racing");
+INSERT INTO inventory VALUES (4, "blue blur", 841.63, "blue", "racing");
+INSERT INTO inventory VALUES (5, "sierra nevada", 621.98, "blue", "mountain");
+INSERT INTO inventory VALUES (6, "cosmic commuter", 461.87, "red", "street");
+INSERT INTO inventory VALUES (7, "beach breeze", 514.98, "blue", "street");
+INSERT INTO inventory VALUES (8, "wilderness rambler", 401.38, "green", "mountain");
+INSERT INTO inventory VALUES (9, "the blob", 1099.79, "green", "racing");
+INSERT INTO inventory VALUES (10, "speed demon", 1049.21, "red", "racing");
+
+-- What is the average price of all bikes in the inventory?
+SELECT AVG (price) FROM inventory;
+
+-- Sort the inventory by color.
+SElECT * FROM inventory ORDER BY color;
+
+-- How many bikes in the inventory are meant for racing?
+SELECT COUNT(terrain) FROM inventory WHERE terrain = "racing";
